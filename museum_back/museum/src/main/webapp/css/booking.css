@@ -1,0 +1,118 @@
+@charset "utf-8";
+legend {
+  display: none;
+}
+/* 메인헤더 */
+
+/* .container {
+  display: flex-box;
+} */
+.container > div {
+  align-content:inherit;
+}
+.main_header {
+  text-align: left;
+  width: 100%;
+  height: 100px;
+  margin: 0 15px;
+}
+.main_header .navigator {
+  margin: 20px 0 10px 0px;
+}
+.main_header .navigator li {
+  display: inline-block;
+}
+.navigator li:first-child a{
+  content: url(../images/iconmonstr-home-7-32.png);
+  width: 16px;
+  height: 16px;
+}
+.navigator a::before {
+  content: ">";
+  padding-right: 10px;
+}
+.navigator li:first-child a::before {
+  content:"";
+}
+.main_header > h2 {
+  margin-left: 10px;
+  font-size: 1.7em;
+  letter-spacing: 2px;
+}
+/* //메인헤더 */
+
+.main_page {
+  position: relative;
+  padding-top: 1px;
+  /* width: 1200px; */
+}
+.main_page .caution {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.main_page .booking_area {
+  margin: 50px auto;
+}
+.main_page .booking_area ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.main_page .booking_area > ul > li {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  height: 300px;
+  border: 2px solid #7f7f7f;
+  margin: 10px 5px 30px 5px;
+  padding-top: 70px;
+}
+.main_page .booking_area .booking {
+  z-index: 1;
+}
+.main_page .booking_area li img {
+  width: 64px; height: 64px;
+  padding-bottom: 15px;
+}
+.main_page .booking_area li h4 {
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+.main_page .booking_area li p {
+  font-size: 0.9em;
+}
+
+.main_page .booking_area li .booking_hover {
+  position: absolute;
+  top: -400px;
+  width: 380px;
+  height: 300px;
+  padding-top: 90px;
+  margin: 0;
+  background-color: black;
+  opacity: 0.9;
+}
+.main_page .booking_area li .booking_hover h4 {
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+.main_page .booking_area .booking_hover p {
+  color: rgb(215, 215, 215);
+}
+.main_page .booking_area .booking_hover ul {
+  display: inline-block;
+}
+.main_page .booking_area .booking_hover ul li{
+  display: inline-block;
+  padding: 30px 10px;
+  /* border: none; */
+}
+.main_page .booking_area .booking_hover ul a {
+  color: orange;
+  border-bottom: 2px solid orange;
+}

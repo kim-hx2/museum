@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/museum.png">
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/agent.js"></script>
+    <title>국립중앙박물관</title>
+    <script>
+      //메인 이미지 슬라이더
+      $(function () {
+        $(".slider_panel").append($(".slider_image").first().clone());
+        $(".slider_panel").prepend($(".slider_image").eq(-2).clone());
+        var index = 1;
+
+        moveSlider(index);
+        $(".control_button").click(function () {
+          index = $(this).index();
+          moveSlider(index + 1);
+        });
+        $(".left_control").click(function () {
+          if (index > 1) {
+            index--;
+            moveSlider(index);
+          } else {
+            $(".slider_panel").css("left", -7680);
+            index = 5;
+            moveSlider(index);
+          }
+        });
+        $(".right_control").click(function () {
+          if (index < 5) {
+            index++;
+            moveSlider(index);
+          } else {
+            $(".slider_panel").css("left", 0);
+            index = 1;
+            moveSlider(index);
+          }
+        });
+          //이미지 슬라이드 구현
+        function moveSlider(index) {
+          $(".slider_panel").animate(
+            {
+              left: -(index * 1280),
+            },
+            "slow"
+          );
+        }
+      });
+      //메인 이미지 슬라이더
+    </script>
+  </head>
+  <body>
+
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="header_link">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="login.html">로그인</a></li>
+          <li><a href="join.html">회원가입</a></li>
+        </ul>
+      </div>
+
+      <!-- 헤더 로고 -->
+      <ul>
+        <li class="header_logo" id="logo">
+          <a href="index.html"><img src="https://www.museum.go.kr/ux/content/images/common/header_logo.png" alt="박물관 메인 로고" /></a>
+        </li>
+      </ul><!-- 헤더 로고 -->
+
+      <!-- 헤더 메뉴 -->
+      <div class="header_menu">
+        <ul>
+          <li>
+            <a href="#">관람정보</a>
+            <div class="sub_menu">
+              <ul class="tour_guide">
+                <li><a href="#">관람 안내</a></li>
+                <li><a href="#">전시 해설</a></li>
+                <li><a href="booking.html">예약하기</a></li>
+                <li><a href="#">관람·편의시설</a></li>
+                <li><a href="#">오시는길</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">전시</a>
+            <div class="sub_menu">
+              <ul class="exhibition">
+                <li><a href="#">상설전시</a></li>
+                <li><a href="#">특별전시</a></li>
+                <li><a href="#">디지털 실감 영상관</a></li>
+                <li><a href="#">온라인 전시관</a></li>
+                <li><a href="#">전시도록</a></li>
+                <li><a href="#">문화 행사</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">소장품</a>
+            <div class="sub_menu">
+              <ul class="collection">
+                <li><a href="#">큐레이터 추천 소장품</a></li>
+                <li><a href="#">소장품 검색</a></li>
+                <li><a href="#">국보·보물 검색</a></li>
+                <li><a href="#">수어 동영상</a></li>
+                <li><a href="#">문화재 기증 안내</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">학술·출판</a>
+            <div class="sub_menu">
+              <ul class="publishing">
+                <li><a href="#">정기간행물</a></li>
+                <li><a href="#">고고학</a></li>
+                <li><a href="#">역사학</a></li>
+                <li><a href="#">미술사학</a></li>
+                <li><a href="#">아시아학</a></li>
+                <li><a href="#">보존과학</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">소식·참여</a>
+            <div class="sub_menu">
+              <ul class="news">
+                <li><a href="#">소식</a></li>
+                <li><a href="#">영상</a></li>
+                <li><a href="#">자원봉사 안내</a></li>
+                <li><a href="#">학예사 자격증 안내</a></li>
+                <li><a href="#">전자 민원</a></li>
+                <li><a href="#">소식지</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">박물관소개</a>
+            <div class="sub_menu">
+              <ul class="introduction">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">비전과 전략</a></li>
+                <li><a href="#">발자취</a></li>
+                <li><a href="#">조직 및 업무</a></li>
+                <li><a href="#">시설소개</a></li>
+                <li><a href="#">박물관 관련 자료</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- //헤더 메뉴 -->
+    </header>
+    <!-- //헤더 -->
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="contentsArea">
+      <!-- 이미지 슬라이더 영역 -->
+      <div class="slider">
+        <div class="slider_panel">
+          <a href="#"><img class="slider_image" src="images/slider_사유의방.jpg" alt="사유의방" /></a>
+          <a href="#"><img class="slider_image" src="images/slider_아스타나고분.jpg" alt="영원한 삶의 집, 아스타나고분" /></a>
+          <a href="#"><img class="slider_image" src="images/slider_아즈테카.jpg" alt="태양을 움직인 사람들, 아즈테카" /></a>
+          <a href="#"><img class="slider_image" src="images/slider_장물아비.jpg" alt="어느 수집가의 초대" /></a>
+          <a href="#"><img class="slider_image" src="images/slider_역사교실.jpg" alt="박물관 역사문화 교실" /></a>
+        </div>
+
+        <div class="arrow_control_panel">
+          <img class="left_control" src="images/iconmonstr-arrow-64-48.png" alt="메인 이미지 슬라이더 왼쪽 화살표" />
+          <img class="right_control" src="images/iconmonstr-arrow-63-48.png" alt="메인 이미지 슬라이더 오른쪽 화살표" />
+        </div>
+      </div> <!-- //이미지 슬라이더 -->
+
+      <!-- 관람 정보 안내 -->
+      <div class="main-information">
+        <ul class="main-info">
+          <li class="info-time">
+            <em></em><strong>관람시간</strong>
+            <div class="time">
+              <ul>
+                <li><strong>월/화/목/금/일</strong> <span>10:00 ~ 18:00</span></li>
+                <li><strong>수/토</strong> <span>10:00 ~ 21:00</span></li>
+                <li><span>&nbsp;&nbsp;&nbsp;⁕입장 마감은 폐관30분 전까지</span></li>
+              </ul>
+            </div>
+          </li>  <!-- //info-time -->
+          <!-- <br> -->
+          <li class="info-admission">
+            <em></em><strong>관람료 </strong>
+            <div class="admission">
+              <ul>
+                <li><strong>무료</strong> <span>&nbsp;&nbsp;&nbsp;⁕특별전시는 유료</span></li>
+              </ul>
+            </div>
+          </li>  <!-- //info-admission -->
+        </ul> 
+      </div>  <!-- //관람 정보 안내 -->
+
+      <!-- 특별전시 -->
+      <div class="special_exhibition">
+        <h2>특별 전시 안내</h2>
+        <div class="special">
+          <a href="#"><img src="images/호랑이.jpg" alt="호랑이 그림Ⅱ" /></a>
+          <div class="detail detail_tiger">
+            <strong class="now">현재전시</strong>
+            <span>|</span>
+            <strong class="type"> 테마전</strong>
+            <a href="#"><p class="detail_name">호랑이 그림Ⅱ</p></a>
+            <p>기간&nbsp; 2022-05-03 ~ 2022-09-04</p>
+            <p>장소&nbsp; 상설전시관 서화실</p>
+            <a class="special_booking" href="#">▸예매 바로가기</a>
+            <br>
+            <p class="description">호랑이는 예로부터 ‘나쁜 기운을 물리치는 신성한 존재'로 여겨져 왔습니다. 우리 선조들은 일상 생활에 호랑이와 관련한 물건을 두어 집안의 평안을 기원했습니다. <br> 선조들이 남긴 그림, 책, 옷 등에 등장하는 호랑이를 감상하며 힘찬 '호랑이 기운' 받으시기 바랍니다.</p>
+          </div>
+        </div>
+
+        <div class="special">
+          <div class="detail detail_aztecs">
+            <strong class="now">현재전시</strong>
+            <span>|</span>
+            <strong class="type"> 특별전</strong>
+            <a href="#"><p class="detail_name">아스테카, 태양을 움직인 사람들</p></a>
+            <p>기간&nbsp; 2022-05-03 ~ 2022-08-28</p>
+            <p>장소&nbsp; 특별전시실</p>
+            <a class="special_booking" href="#">▸예매 바로가기</a>
+            <br>
+            <p class="description">아스테카는 갑작스레 사라졌지만, 그들의 흔적은 오늘날에도 여전히 우리 곁에 살아있습니다. 현대 멕시코의 문화적 기반을 이루고 있으며, 전 세계 사람들이 그들의 음식을 즐기고 있습니다<br>
+              올해는 아스테카의 후예, 멕시코와 대한민국이 수교한 지 60년이 되는 해입니다. 이번 전시가 아스테카의 역사와 문화를 새로운 시각에서 이해하는 기회가 되길 바랍니다.</p>
+          </div>
+          <a href="#"><img src="images/아스테카.jpg" alt="Aztecs 태양을 움직인 사람들" /></a>
+        </div>
+      </div> <!-- //특별전시 -->
+  
+      <!-- 게시판 -->
+      <div class="board-area">
+        <em></em><h2>알립니다</h2>
+        <!-- 공지게시판 -->
+        <div class="notice_area">
+          <a href="#" class="more" title="더보기">더보기</a>
+          <section id="notice_1">
+            <h2><a href="#notice_1" class="notice_title" id="notice_title_1">알림</a></h2>
+            <ul>
+              <li><a href="#">『미술자료』 제102호 원고 모집 안내</a>
+                <time datetime="2022-07-20">2022.07.20</time>
+              </li>
+              <li><a href="#">[여름방학 맞이]실감콘텐츠&lt;조선시대 초상화&gt; 연장 운영</a>
+                <time datetime="2022-07-26">2022.07.26</time>
+              </li>
+              <li><a href="#">[문화가 있는 날]'상자가 열리면!' 행사 안내 (7.27)</a>
+                <time datetime="2022-07-26">2022.07.26</time>
+              </li>
+              <li><a href="#">분실물 정보 안내</a>
+                <time datetime="2022-07-25">2022.07.25</time>
+              </li>
+              <li><a href="#">불교회화실, 불교조각실 임시 휴일 안내 (7.25.~27.)</a>
+                <time datetime="2022-07-20">2022.07.20</time>
+              </li>
+            </ul>
+            
+          </section>
+          <section id="notice_2">
+            <h2><a href="#notice_2" id="notice_title_2">고시/공고</a></h2>
+            <ul>
+              <li><a href="#">국립청주박물관 학예연구실 공무직근로자（학예보조）채용 최종 합격자 공고</a>
+                <time datetime="2022-07-25">2022.07.25</time>
+              </li>
+              <li><a href="#">국립광주박물관 공무직(학예보조) 근로자 채용 서류전형 합격자 및 면접 일정 공고</a>
+                <time datetime="2022-07-26">2022.07.26</time>
+              </li>
+              <li><a href="#">2022년 국립공주박물관 학예연구실 공무직 근로자(교육보조) 채용 최종 합격자 안내</a>
+                <time datetime="2022-07-21">2022.07.21</time>
+              </li>
+              <li><a href="#">2022년도 국립부여박물관 공무직 근로자(위생원) 채용 최종 합격자 공고</a>
+                <time datetime="2022-07-21">2022.07.21</time>
+              </li>
+              <li><a href="#">국립익산박물관 대체인력(한시임기제 8호) 채용 서류전형 합격자 및 면접 일정 공고</a>
+                <time datetime="2022-07-21">2022.07.21</time>
+              </li>
+            </ul>
+          </section>
+          <section id="notice_3">
+            <h2><a href="#notice_3" id="notice_title_3">채용 안내</a></h2>
+            <ul>
+              <li><a href="#">2022년도 국립중앙박물관 시설관리과 공무직 [기계(교대), 소방[선임], 미화, 조경] 채용 최종합격자 공고</a>
+                <time datetime="2022-07-22">2022.07.22</time>
+              </li>
+              <li><a href="#">국립중앙박물관 고객지원팀 공무직(한국어 영어 전시해설) 채용시험 최종합격자 공고</a>
+                <time datetime="2022-07-22">2022.07.22</time>
+              </li>
+              <li><a href="#">국립중앙박물관 디자인팀 기간제근로자(출판·홍보) 채용시험 최종합격자 공고</a>
+                <time datetime="2022-07-22">2022.07.22</time>
+              </li>
+              <li><a href="#">국립중앙박물관 고객지원팀 공무직근로자(한국어 영어 전시해설) 채용 서류전형 합격자 및 면접시험 공고</a>
+                <time datetime="2022-07-19">2022.07.19</time>
+              </li>
+              <li><a href="#">2022년 국립중앙박물관 학예연구직 공무원 경력경쟁채용시험 서류전형 합격자 및 면접시험 공고</a>
+                <time datetime="2022-07-18">2022.07.18</time>
+              </li>
+            </ul>
+          </section>
+          <section id="notice_4">
+            <h2><a href="#notice_4" id="notice_title_4">보도자료</a></h2>
+            <ul>
+              <li><a href="#">[국립경주박물관] 직접 전시를 기획해 보자, 어린이 큐레이터 체험</a>
+                <time datetime="2022-07-26">2022.07.26</time>
+              </li>
+              <li><a href="#">[국립경주박물관] 올 여름 경주 여행은 국립경주박물관과 함께</a>
+                <time datetime="2022-07-25">2022.07.25</time>
+              </li>
+              <li><a href="#">[국립중앙박물관] 국립중앙박물관, 우리 문화재 국외전시 '한국의치미' 연계 온라인 학술대회 개최</a>
+                <time datetime="2022-07-22">2022.07.22</time>
+              </li>
+              <li><a href="#">	[국립중앙박물관] 국립중앙박물관, 어린이박물관 여름방학 교육프로그램 운영</a>
+                <time datetime="2022-07-22">2022.07.22</time>
+              </li>
+              <li><a href="#">[국립중앙박물관] 국립중앙박물관, 메타버스의 가능성과 과제 모색 '박물관과 비욘드 메타버스' 포럼 개최</a>
+                <time datetime="2022-07-20">2022.07.20</time>
+              </li>
+            </ul>
+          </section>
+        </div> <!-- //공지 게시판 영역 -->
+
+        <!-- 예약하기 -->
+        <div class="location_book">
+          <section id="location_book-1">
+            <h2><a href="booking.html" id="book">예약하기</a></h2>
+            <div class="book_area">
+              <div class="booking_1"><a href="#">어린이박물관 관람 예약</a></div>
+              <div class="booking_2"><a href="#">VR체험 예약</a></div>
+              <div class="booking_3"><a href="#">교육 프로그램 예약</a></div>
+              <div class="booking_4"><a href="#">학생 단체 관람 예약</a></div>
+              <div class="booking_5"><a href="#">전시 해설 예약</a></div>
+              <div class="booking_6"><a href="#">외부 해설 예약</a></div>
+            </div>
+          </section>
+        </div> <!-- //예약하기 -->
+      </div>
+
+      
+    </main> <!-- //메인 컨텐츠 영역 -->
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="footer_inner footer_inner_1">
+        <ul class="footer_guide">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">전자민원</a></li>
+          <li><a href="#">공공데이터개방</a></li>
+          <li><a href="#">저작권정책</a></li>
+          <li><a href="#">클린신고센터</a></li>
+          <li><a href="#">찾아오시는길</a></li>
+        </ul>
+        <div class="social">
+          <ul class="social_links">
+            <li><a href="https://blog.naver.com/100museum" target="_blank"><img src="images/naver-blog.png" alt="블로그" title="블로그"></a></li>
+            <li><a href="https://twitter.com/The_NMK" target="_blank"><img src="images/iconmonstr-twitter-4-32.png" alt="트위터" title="트위터"></a></li>
+            <li><a href="https://www.facebook.com/NationalMuseumofKorea/" target="_blank"><img src="images/iconmonstr-facebook-4-32.png" alt="페이스북" title="페이스북"></a></li>
+            <li><a href="https://www.instagram.com/nationalmuseumofkorea/" target="_blank"><img src="images/iconmonstr-instagram-14-32.png" alt="인스타그램" title="인스타그램"></a></li>
+            <li><a href="https://www.youtube.com/user/koreanmuseum" target="_blank"><img src="images/iconmonstr-youtube-9-32.png" alt="유튜브" title="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_inner footer_inner_2">
+          <!-- <h3>국립중앙박물관</h3> -->
+          <address>
+            <span>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)</span>
+            <span>대표전화 02-2077-9000</span>
+          </address>
+          <span class="copyright">&copy; National Museum of Korea</span>
+        <div class="mark">
+          <img src="images/web_access.png" alt="">
+          <img src="images/logo_open.png" alt="">
+        </div>
+      </div>
+    </footer> <!-- //푸터 -->
+  </body>
+</html>

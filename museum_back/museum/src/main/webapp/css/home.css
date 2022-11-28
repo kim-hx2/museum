@@ -1,0 +1,291 @@
+
+/* 메인_슬라이더 */
+
+.slider {
+  position: relative;
+  width: 1280px;
+  overflow: hidden;
+}
+
+.slider_panel {
+  width: 8960px;
+  position: relative;
+}
+.slider_image {
+  width: 1280px;
+  height: 512px;
+  float: left;
+}
+
+.left_control {
+  position: absolute;
+  top: 210px;
+  left: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.right_control {
+  position: absolute;
+  top: 210px;
+  right: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.left_control:hover,
+.right_control:hover {
+  opacity: 0.6;
+}
+/* //메인_슬라이더 */
+
+/* 관람 정보 안내 */
+.main-information {
+  border-bottom: 4px solid black;
+  padding: 25px 0;
+}
+.main-information .main-info > li  {
+  display: flex;
+  text-align: left;
+  margin-left: 20px;
+}
+.main-information .main-info > li li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.main-information .main-info .info-time > em {
+  width: 30px; height: 20px;
+  background: url(../images/iconmonstr-time-2-48.png) no-repeat;
+  background-size: contain;
+  padding: 5px; margin: 5px;
+}
+.main-information .main-info .info-admission > em {
+  width: 30px; height: 25px;
+  background: url(../images/iconmonstr-credit-card-10-48.png) no-repeat;
+  background-size: contain;
+  padding: 5px; margin: 5px;
+}
+.main-information .main-info > li > strong {
+  font-size: 1.6em;
+  width: 130px;
+}
+.info-time .time,
+.info-admission .admission {
+  width: 1100px;
+  text-align: left;
+  font-size: 1.2em;
+}
+.info-time > .time >  ul li > strong,
+.info-admission > .admission >  ul li > strong {
+  font-size: 1.3em;
+  padding-right: 10px;
+}
+/* //관람 정보 안내 */
+
+/* 메인_특별전시 */
+.special_exhibition {
+  width: 1280px;
+  margin-top: 10px;
+}
+.special {
+  border-bottom: 3px solid #ccc;
+}
+.special_exhibition h2 {
+  font-size: 2em;
+  letter-spacing: 3px;
+  padding: 15px 0 15px 0;
+  border-bottom: 3px solid #ccc;
+}
+
+.special_exhibition > .special {
+  height: 420px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+.special_exhibition > .special > .detail {
+  display: block;
+  padding: 20px;
+  margin: 0 10px 0 10px;
+  letter-spacing: 2px;
+}
+.special_booking {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 5px;
+  border-bottom: 3px solid #fff;
+}
+.special_booking:hover {
+  border-bottom: 3px solid #000;
+}
+
+.detail_tiger {
+  text-align: left;
+  margin-left: 15px;
+}
+.detail_aztecs {
+  text-align: right;
+  margin-right: 15px;
+}
+
+.detail_name {
+  font-size: 1.2em;
+  font: bold;
+}
+.now {
+  padding: 0 10px;
+  background-color: rgb(249, 194, 91);
+}
+.type {
+  padding: 0 10px;
+  background-color: tomato;
+}
+span {
+  font-size: 1.2em;
+}
+.description {
+  font-style: italic;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.special_exhibition .special img {
+  width: 300px;
+  height: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* //메인_특별전시 */
+
+/* 게시판 */
+.board-area {
+  position: relative;
+  height: 450px;
+  padding-top: 20px;
+}
+.board-area em {
+  background: url(../images/iconmonstr-info-12-48.png) no-repeat;
+  background-size: contain;
+  width: 10%;
+  padding: 5px 15px;
+}
+/*알립니다*/
+.board-area > h2 {
+  display: inline-block;
+  width: 90%;
+  text-align: left;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+}
+.board-area > div {
+  display: inline-block;
+  position: relative;
+  width: 600px;
+  height: 360px;
+  overflow: hidden;
+  margin: 0 10px;
+  border-bottom: 2px solid #000;
+}
+.board-area .notice_area section {
+  position: relative;
+}
+
+.board-area .notice_area section:target {
+  z-index: 20;
+}
+
+.board-area .notice_area h2 {
+  float: left;
+  font-size: 1.4em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+.board-area .notice_area h2 a {
+  display: inline-block;
+  padding: 5px 25px;
+}
+.board-area .notice_area section:hover h2 a,
+.board-area .notice_area section:target h2 a {
+  border-bottom: 4px solid #000;
+}
+.board-area .notice_area ul {
+  position: absolute;
+  top:50px;
+  padding-top: 10px;
+  background-color: white;
+}
+.board-area .notice_area ul a::before {
+  content: "‣";
+  padding-right: 10px;
+}
+.board-area .notice_area ul a {
+  display: inline-block;
+  width: 480px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 10px;
+  font-size: 1.3em;
+}
+.board-area .notice_area time {
+  float: right;
+  padding: 10px 3px;
+}
+.board-area .notice_area ul {
+  position: absolute;
+}
+.board-area .notice_area .more {
+  content: url(../images/iconmonstr-plus-square-lined-32.png);
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}
+  /* //공지게시판 */
+
+  /* 예약하기 */
+  .board-area .location_book section {
+    position: relative;
+  }
+  .board-area .location_book h2 {
+    float: left;
+    position: relative;
+    font-size: 1.4em;
+    border-bottom: 4px solid black;
+    padding: 7px 0;
+  }
+  .board-area .location_book h2 a {
+    /* display: inline-block; */
+    padding: 4px 25px;
+  }
+  .board-area .location_book section > div {
+    position: relative;
+    background-color: white;
+  }
+  .board-area .location_book section > div {
+    position: absolute;
+    top: 60px;
+    flex-wrap: wrap;
+  }
+  .board-area .location_book .book_area > div {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 280px;
+    height: 90px;
+    border: 2px solid #ccc;
+  }
+  .board-area .location_book .book_area > div > a {
+    display: block;
+    width: 100%;
+    padding: 31px 0;
+    font-size: 1.2em;
+  }
+  .book_area div:hover > a {
+    font-weight: 700;
+  }
+
+
+  /* //예약하기 */
+/* //게시판 */

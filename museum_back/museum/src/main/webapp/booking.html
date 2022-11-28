@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="images/museum.png">
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/booking.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <title>국립중앙박물관_예약하기</title>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header_link">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="join.html">회원가입</a></li>
+      </ul>
+    </div>
+
+    <!-- 헤더 로고 -->
+    <ul>
+      <li class="header_logo" id="logo">
+        <a href="index.html"><img src="https://www.museum.go.kr/ux/content/images/common/header_logo.png" alt="박물관 메인 로고" /></a>
+      </li>
+    </ul><!-- 헤더 로고 -->
+
+    <!-- 헤더 메뉴 -->
+    <div class="header_menu">
+      <ul>
+        <li>
+          <a href="#">관람정보</a>
+          <div class="sub_menu">
+            <ul class="tour_guide">
+              <li><a href="#">관람 안내</a></li>
+              <li><a href="#">전시 해설</a></li>
+              <li><a href="booking.html">예약하기</a></li>
+              <li><a href="#">관람·편의시설</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">전시</a>
+          <div class="sub_menu">
+            <ul class="exhibition">
+              <li><a href="#">상설전시</a></li>
+              <li><a href="#">특별전시</a></li>
+              <li><a href="#">디지털 실감 영상관</a></li>
+              <li><a href="#">온라인 전시관</a></li>
+              <li><a href="#">전시도록</a></li>
+              <li><a href="#">문화 행사</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">소장품</a>
+          <div class="sub_menu">
+            <ul class="collection">
+              <li><a href="#">큐레이터 추천 소장품</a></li>
+              <li><a href="#">소장품 검색</a></li>
+              <li><a href="#">국보·보물 검색</a></li>
+              <li><a href="#">수어 동영상</a></li>
+              <li><a href="#">문화재 기증 안내</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">학술·출판</a>
+          <div class="sub_menu">
+            <ul class="publishing">
+              <li><a href="#">정기간행물</a></li>
+              <li><a href="#">고고학</a></li>
+              <li><a href="#">역사학</a></li>
+              <li><a href="#">미술사학</a></li>
+              <li><a href="#">아시아학</a></li>
+              <li><a href="#">보존과학</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">소식·참여</a>
+          <div class="sub_menu">
+            <ul class="news">
+              <li><a href="#">소식</a></li>
+              <li><a href="#">영상</a></li>
+              <li><a href="#">자원봉사 안내</a></li>
+              <li><a href="#">학예사 자격증 안내</a></li>
+              <li><a href="#">전자 민원</a></li>
+              <li><a href="#">소식지</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">박물관소개</a>
+          <div class="sub_menu">
+            <ul class="introduction">
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">비전과 전략</a></li>
+              <li><a href="#">발자취</a></li>
+              <li><a href="#">조직 및 업무</a></li>
+              <li><a href="#">시설소개</a></li>
+              <li><a href="#">박물관 관련 자료</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- //헤더 메뉴 -->
+  </header> <!-- //헤더 -->
+
+  
+  <main class="main_wrapper">
+    <div class="container">
+      <!-- 메인페이지 헤더 -->
+      <div class="main_header">
+        <div class="navigator">
+          <ul>
+            <li class="home"><a href="index.html">Home</a></li>
+            <li><a href="#">관람정보</a></li>
+            <li><a href="booking.html">예약하기</a></li>
+          </ul>
+        </div>
+        <h2>예약하기</h2>
+      </div> <!-- // 메인페이지 헤더 -->
+
+      <div class="main_page">
+        <div class="caution">
+          <p>- 실내 마스크 착용 및 체온 측정 등 방역 지침을 준수해 주시기 바랍니다.</p>
+        </div>
+        <div class="booking_area">
+          <ul>
+            <li>
+              <div class="booking booking_1">
+                <img src="images/children.png" alt="어린이박물관 관람 예약">
+                <h4>어린이박물관 관람 예약</h4>
+                <p>어린이박물관은 인터넷 예약을 통해<br>관람하실 수 있으며 무료관람입니다.</p>
+              </div>
+              <div class="booking_hover booking_hover_3">
+                <h4>어린이박물관 관람 예약</h4>
+                <p>어린이박물관은 인터넷 예약을 통해<br>관람하실 수 있으며 무료관람입니다.</p>
+                <ul>
+                  <li><a href="#">예약하기</a></li>
+                  <li><a href="#">예약내역 조회</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="booking booking_2">
+                <img src="images/immersive.png" alt="VR체험 예약">
+                <h4>VR체험 예약</h4>
+                <p>가상현실(VR) 체험은 인터넷 예약 후 관람하실 수 있습니다.<br>
+                  가상현실(VR) 체험을 제외한 디지털 실감 영상관 콘텐츠는<br>
+                  예약 없이 관람 가능합니다.<br>
+                  (관람 희망일 30일 전부터 가능)</p>
+              </div>
+              <div class="booking_hover booking_hover_3">
+                <h4>VR체험 예약</h4>
+                <p>가상현실(VR) 체험은 인터넷 예약 후 관람하실 수 있습니다.<br>
+                  가상현실(VR) 체험을 제외한 디지털 실감 영상관 콘텐츠는<br>
+                  예약 없이 관람 가능합니다.<br>
+                  (관람 희망일 30일 전부터 가능)</p>
+                <ul>
+                  <li><a href="#">예약하기</a></li>
+                  <li><a href="#">예약내역 조회</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="booking booking_3">
+                <img src="images/education.png" alt="교육 프로그램 예약">
+                <h4>교육 프로그램 예약</h4>
+                <p>박물관 교육프로그램은 청소년, 성인, 장애인, 외국인,<br>
+                  전문인력등 다양한 계층을 대상으로 교육프로그램을<br>
+                  제공하고 있습니다.</p>
+              </div>
+              <div class="booking_hover booking_hover_3">
+                <h4>교육 프로그램 예약</h4>
+                <p>박물관 교육프로그램은 청소년, 성인, 장애인, 외국인,<br>
+                  전문인력등 다양한 계층을 대상으로 교육프로그램을<br>
+                  제공하고 있습니다.</p>
+                <ul>
+                  <li><a href="#">예약하기</a></li>
+                  <li><a href="#">예약내역 조회</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="booking booking_4">
+                <img src="images/school.png" alt="학생 단체 관람 예약">
+                <h4>학생 단체 관람 예약</h4>
+                <p>초.중.고등학교 학생 단체(30명 이상)대상의 박물관<br>
+                  관람은 사전예약제로 운영하고 있습니다.</p>
+              </div>
+              <div class="booking_hover booking_hover_4">
+                <h4>학생 단체 관람 예약</h4>
+                <p>초.중.고등학교 학생 단체(30명 이상)대상의 박물관<br>
+                  관람은 사전예약제로 운영하고 있습니다.</p>
+                <ul>
+                  <li><a href="#">예약하기</a></li>
+                  <li><a href="#">예약내역 조회</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="booking booking_5">
+                <img src="images/visitors.png" alt="전시 해설 예약">
+                <h4>전시 해설 예약</h4>
+                <p>태블릿 PC를 활용한 스마트 큐레이터, 야외 전시해설 등<br>
+                  테마형 전시 관람 안내 서비스를 제공하고 있습니다.</p>
+              </div>
+              <div class="booking_hover booking_hover_5">
+                <h4>전시 해설 예약</h4>
+                <p>태블릿 PC를 활용한 스마트 큐레이터, 야외 전시해설 등<br>
+                  테마형 전시 관람 안내 서비스를 제공하고 있습니다.</p>
+                <ul>
+                  <li><a href="#">예약하기</a></li>
+                  <li><a href="#">예약내역 조회</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="booking booking_6">
+                <img src="images/management.png" alt="외부해설 예약">
+                <h4>외부해설 예약</h4>
+                <p>박물관 공식해설이 아닌 직접 해설을 하는 단체는<br>
+                  사전 예약 후 관람이 가능합니다.</p>
+              </div>
+              <div class="booking_hover booking_hover_6">
+                <h4>외부해설 예약</h4>
+                <p>박물관 공식해설이 아닌 직접 해설을 하는 단체는<br>
+                  사전 예약 후 관람이 가능합니다.</p>
+                <ul>
+                  <li><a href="#">예약하기</a></li>
+                  <li><a href="#">예약내역 조회</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        $('.main_page li').hover(function(){
+          $(this).find('.booking_hover').stop().animate({
+            top:0
+          },200)
+        }, function(){
+          $(this).find('.booking_hover').animate({
+            top:400
+          },200)
+        });
+      </script>
+
+    </div>
+
+  </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="footer_inner footer_inner_1">
+        <ul class="footer_guide">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">전자민원</a></li>
+          <li><a href="#">공공데이터개방</a></li>
+          <li><a href="#">저작권정책</a></li>
+          <li><a href="#">클린신고센터</a></li>
+          <li><a href="#">찾아오시는길</a></li>
+        </ul>
+        <div class="social">
+          <ul class="social_links">
+            <li><a href="https://blog.naver.com/100museum" target="_blank"><img src="images/naver-blog.png" alt="블로그" title="블로그"></a></li>
+            <li><a href="https://twitter.com/The_NMK" target="_blank"><img src="images/iconmonstr-twitter-4-32.png" alt="트위터" title="트위터"></a></li>
+            <li><a href="https://www.facebook.com/NationalMuseumofKorea/" target="_blank"><img src="images/iconmonstr-facebook-4-32.png" alt="페이스북" title="페이스북"></a></li>
+            <li><a href="https://www.instagram.com/nationalmuseumofkorea/" target="_blank"><img src="images/iconmonstr-instagram-14-32.png" alt="인스타그램" title="인스타그램"></a></li>
+            <li><a href="https://www.youtube.com/user/koreanmuseum" target="_blank"><img src="images/iconmonstr-youtube-9-32.png" alt="유튜브" title="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_inner footer_inner_2">
+          <address>
+            <span>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)</span>
+            <span>대표전화 02-2077-9000</span>
+          </address>
+          <span class="copyright">&copy; National Museum of Korea</span>
+        <div class="mark">
+          <img src="images/web_access.png" alt="">
+          <img src="images/logo_open.png" alt="">
+        </div>
+      </div>
+    </footer> <!-- //푸터 -->
+</body>
+</html>
